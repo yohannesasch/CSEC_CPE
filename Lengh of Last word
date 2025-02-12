@@ -1,0 +1,16 @@
+class Solution:  
+    def lengthOfLastWord(self, s: str) -> int:  
+        # Strip any trailing spaces  
+        s = s.rstrip()  
+        
+        # Find the last space index  
+        last_space_index = s.rfind(' ')  
+        
+        if last_space_index == -1:  
+            # If there is no space, the entire string is a single word  
+            return len(s)  
+        
+        # The length of the last word is the difference between the string length and the last space index  
+        return len(s) - last_space_index - 1 
+       
+         
